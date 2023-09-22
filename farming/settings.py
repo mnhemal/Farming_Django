@@ -143,6 +143,7 @@ SPECTACULAR_SETTINGS = {
     'SERVE_INCLUDE_SCHEMA': False,
     # OTHER SETTINGS
 }
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
