@@ -7,7 +7,7 @@ from typing import Set
 
 class TimeStampModelMixin(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
-    # updated_at = models.DateTimeField(auto_now=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         abstract = True
@@ -21,6 +21,6 @@ class BaseModelMixin(TimeStampModelMixin):
 from rest_framework.pagination import PageNumberPagination
 
 class StandardResultsSetPagination(PageNumberPagination):
-    page_size = 100
+    page_size = 600
     page_size_query_param = 'page_size'
-    max_page_size = 1000
+    max_page_size = 100
