@@ -3,7 +3,7 @@ from rest_framework import viewsets
 from rest_framework_extensions.mixins import DetailSerializerMixin
 
 from apps.farm_one.models import FarmOne
-from apps.farm_one.serializers.students import FarmOneSerializer, GetFarmOneSerializer, PostFarmOneSerializer, \
+from apps.farm_one.serializers.farmone import FarmOneSerializer, GetFarmOneSerializer, PostFarmOneSerializer, \
     PutFarmOneSerializer, PatchFarmOneSerializer, ListFarmOneSerializer
 from utils.mixin import StandardResultsSetPagination
 

@@ -7,7 +7,7 @@ from .views import FarmOneViewSet
 
 app_name = "farm_one"
 router = DefaultRouter()
-router.register(r"", FarmOneViewSet, basename="students")
+router.register(r"", FarmOneViewSet, basename="farm_one")
 urlpatterns = [
     path("", include(router.urls)),
     # path("students/", StudentsViewSet.as_view(), name="students"),

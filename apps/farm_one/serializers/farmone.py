@@ -18,7 +18,7 @@ class GetFarmOneSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = FarmOne
-        exclude = ('created_at', 'updated_at', 'is_active')
+        exclude = ('created_at',)
 
 class PostFarmOneSerializer(GetFarmOneSerializer):
     pass
@@ -32,4 +32,4 @@ class PatchFarmOneSerializer(GetFarmOneSerializer):
 class ListFarmOneSerializer(GetFarmOneSerializer):
     class Meta:
         model = FarmOne
-        fields = ('id', 'ph', 'temperature', 'turbidity')
+        fields = ('id', 'ph', 'temperature', 'humidity')
