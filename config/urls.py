@@ -27,12 +27,12 @@ from config import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('v1/api/users/', include("apps.user_portal.urls", namespace="user_portal")),
-    path('v1/api/farms/', include("apps.farm_portal.urls", namespace="farm_portal")),
-    path('v1/api/sensors/', include("apps.sensor_portal.urls", namespace="sensor_portal")),
+    path('v2/api/farms/', include("apps.farm_portal.urls", namespace="farm_portal")),
+    path('v3/api/sensors/', include("apps.sensor_portal.urls", namespace="sensor_portal")),
     # path('v1/api/teachers/', include("apps.teacher_portal.urls", namespace="teacher_portal")),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
-        "docs/",
+        "",
         SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
